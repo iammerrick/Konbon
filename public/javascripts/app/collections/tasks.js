@@ -1,7 +1,9 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
+define(['jquery', 'underscore', 'backbone', 'app/models/task'], function($, _, Backbone, Task){
+
     var TasksCollection = Backbone.Collection.extend({
-        url: '/tasks'
+        url: '/tasks',
+        model: Task
     });
 
-   return TasksCollection; 
+   return (new TasksCollection); 
 });

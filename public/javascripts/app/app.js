@@ -1,16 +1,18 @@
-define(['jquery', 'backbone', 'app/views/board'], function($, Backbone){
+define(['jquery', 'backbone', 'app/views/board', 'app/collections/tasks'], function($, Backbone, BoardView, TasksCollection){
 
-    var Router = Backbone.Router.extend({
+    var App = Backbone.Router.extend({
 
         routes : {
             "" : "index"
         },
 
         index: function(){
-            console.log("run");
+            new BoardView({
+                collection: TasksCollection
+            });
         }
 
     });
 
-    return Router;
+    return App;
 });
