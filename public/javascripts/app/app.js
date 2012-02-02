@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone'], function($, _, Backbone){
+define(['jquery', 'backbone', 'app/views/board'], function($, Backbone){
 
     var Router = Backbone.Router.extend({
 

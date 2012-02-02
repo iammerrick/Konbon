@@ -1,5 +1,6 @@
 module.exports = {
   root: [
-    ['get', '/', 'Home']
+    ['get', '/', 'Home'],
+    ['get', '/tasks', 'Tasks']
   ]
 }
