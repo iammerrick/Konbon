@@ -1,0 +1,1 @@
+module.exports = BaseModel.extend(function(options){});
