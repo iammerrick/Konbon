@@ -1,4 +1,4 @@
-define(['jquery', 'backbone', 'app/views/board', 'app/collections/tasks'], function($, Backbone, BoardView, TasksCollection){
+define(['jquery', 'backbone', 'app/views/board', 'app/collections/tasks', 'app/models/board'], function($, Backbone, BoardView, TasksCollection, Board){
 
     var App = Backbone.Router.extend({
 
@@ -8,7 +8,8 @@ define(['jquery', 'backbone', 'app/views/board', 'app/collections/tasks'], funct
 
         index: function(){
             new BoardView({
-                collection: TasksCollection
+                collection: TasksCollection,
+                model: (new Board({ id: 12 }))
             });
         }
 

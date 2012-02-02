@@ -5,6 +5,7 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
               {
                     "description" : "Write a twitter connector", 
                     "started" : "Started January 2",
+                    "column" : "1",
                     "items" : [
                         {
                             "item" : "Development",
@@ -21,6 +22,7 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
               {
                     "description" : "Write a twitter connector", 
                     "started" : "Started January 2",
+                    "column" : "2",
                     "items" : [
                         {
                             "item" : "Development",
