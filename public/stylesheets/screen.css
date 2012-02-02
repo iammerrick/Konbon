@@ -1,0 +1,235 @@
+/* line 17, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/screen.scss */
+body {
+  background: url('../images/grid.png?1328146262');
+  font: 12px "Helvetica Neue", Helvetica;
+  color: #8d8d8d;
+}
+
+/* line 14, ../sass/screen.scss */
+.header {
+  background-color: #FFFFFF;
+  color: #6e6e6e;
+  height: 100px;
+  line-height: 100px;
+}
+
+/* line 21, ../sass/screen.scss */
+.headers {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.headers li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+/* line 48, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.headers li:first-child, .headers li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.headers li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.headers li.last {
+  padding-right: 0;
+}
+/* line 24, ../sass/screen.scss */
+.headers li {
+  width: 230px;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: #555555 0px -1px 0px;
+  text-align: center;
+}
+
+/* line 33, ../sass/screen.scss */
+.column {
+  width: 230px;
+  margin: 0px 40px;
+  float: left;
+}
+/* line 38, ../sass/screen.scss */
+.column:first-child {
+  margin-left: 0px;
+}
+/* line 42, ../sass/screen.scss */
+.column:last-child {
+  margin-right: 0px;
+}
+
+/* line 47, ../sass/screen.scss */
+.inside {
+  padding: 0px 40px;
+}
+
+/* line 51, ../sass/screen.scss */
+.task {
+  background-color: #FFFFFF;
+  margin: 25px 0px 50px;
+  padding: 20px 10px 65px;
+  position: relative;
+  -moz-box-shadow: #bdb9b8 0px 1px 3px;
+  -webkit-box-shadow: #bdb9b8 0px 1px 3px;
+  -o-box-shadow: #bdb9b8 0px 1px 3px;
+  box-shadow: #bdb9b8 0px 1px 3px;
+}
+/* line 58, ../sass/screen.scss */
+.task .responsible {
+  background-color: #F2F0F0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 10px;
+  font-weight: bold;
+  color: #8d8d8d;
+}
+/* line 71, ../sass/screen.scss */
+.task .pin {
+  background: url('../images/pin.png?1328148019') no-repeat;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 102.5px;
+  top: -12.5px;
+}
+/* line 81, ../sass/screen.scss */
+.task .details h2 {
+  color: #575757;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0px 2px 0px;
+}
+/* line 88, ../sass/screen.scss */
+.task .details .small {
+  font-size: a10px;
+  text-align: center;
+}
+/* line 94, ../sass/screen.scss */
+.task .receipt {
+  margin-top: 20px;
+}
+/* line 97, ../sass/screen.scss */
+.task .receipt ul {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 102, ../sass/screen.scss */
+.task .receipt li {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 5px 0px;
+}
+/* line 107, ../sass/screen.scss */
+.task .receipt li:first-child {
+  padding-top: 20px;
+}
+/* line 111, ../sass/screen.scss */
+.task .receipt li:last-child {
+  padding-bottom: 20px;
+}
+/* line 115, ../sass/screen.scss */
+.task .receipt .item {
+  float: left;
+}
+/* line 119, ../sass/screen.scss */
+.task .receipt .cost {
+  float: right;
+}
+/* line 123, ../sass/screen.scss */
+.task .receipt .total {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 10px 0px;
+}
+/* line 127, ../sass/screen.scss */
+.task .receipt .total .cost {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 132, ../sass/screen.scss */
+.task .receipt .total .good {
+  color: #588400;
+}
+/* line 136, ../sass/screen.scss */
+.task .receipt .total .bad {
+  color: #a80707;
+}
