@@ -1,37 +1,44 @@
-define(['jquery', 'backbone', 'app/views/task'], function($, Backbone, TaskView){
+define(['jquery', 'backbone', 'app/views/task', 'app/models/task'], function($, Backbone, TaskView, Task){
 
     var BoardView = Backbone.View.extend({
-        el: '.columns',
-        initialize: function(){
+
+		initialize: function(){
             var self = this;
 
-            _(this).bindAll('render');
+			_(this).bindAll('render');
 
-            this.collection.bind('reset', this.render);
-
-            this.model.bind('change', function(){
-                self.collection.fetch();
-            });
+			this.model.bind('change', this.render);
 
             this.model.fetch();
         },
 
         render: function(){
-            var self = this;
-            _(this.model.get('columns')).each(function(column){
-                $('.headers').append($('<li />').text(column.name));
-                var columnEl = $('<div class="column" data-column-id="'+column.id+'"/>');
-                var columnTasks = self.collection.filter(function(task){
-                    return task.get('column') === column.id;
-                });
-                _(columnTasks).each(function(task){
-                    columnEl.append(new TaskView({ model : task}).render().el);
-                });
-                self.$el.append(columnEl);
-            });
-
+			this.createColumns();
+			console.log(this.model.toJSON());
             return this;
-        }
+        },
+
+		createColumns: function(){
+			// Iterate through columns
+			_(this.model.get('columns')).each(function(column){
+				
+				// Make the headers
+				$('.headers').append('<li>'+column.name+'</li>');
+				
+
+				// Make the column and append to DOM
+				var $column = $('<div class="column" data-column-id="'+column._id+'" />');
+				$('.columns').append($column);
+				
+				_(column.tasks).each(function(task){
+					var taskView = new TaskView({
+						model: new Task({ id : task})
+					});
+					
+					$column.append(taskView.el);
+				});
+			});
+		}
     });
 
     return BoardView;

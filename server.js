@@ -1,4 +1,8 @@
-var matador = require('matador')
+var matador = require('matador'),
+	Q = global.Q = require('Q'),
+	mongoose = global.mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/konbon');
 
 app.configure(function () {
   app.set('models', __dirname + '/app/models')

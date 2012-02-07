@@ -1,50 +1,38 @@
-module.exports = require(app.set('controllers') + '/ApplicationController').extend({})
-  .methods({
-    index: function () {
-      var config = require('../config/db');
-	  var Task = require('../models/Task');
+module.exports = require(app.set('controllers') + '/ApplicationController').extend()
+	.methods({
+		
+		index: function(){
+			this.json({'status' : 'success'});
+		},
 
-      this.json([ 
-              {
-                    "description" : "Write a twitter connector", 
-                    "started" : "Started January 2",
-                    "column" : "1",
-                    "items" : [
-                        {
-                            "item" : "Development",
-                            "cost" : "3 Days"
-                        },
-                        {
-                            "item" : "Design",
-                            "cost" : "9 Days"
-                        }
-                    ],
-                    "total" : "12 Days",
-                    "responsible" : "Merrick Christensen"
-              },
-              {
-                    "description" : "Write a twitter connector", 
-                    "started" : "Started January 2",
-                    "column" : "2",
-                    "items" : [
-                        {
-                            "item" : "Development",
-                            "cost" : "3 Days"
-                        },
-                        {
-                            "item" : "Design",
-                            "cost" : "9 Days"
-                        }
-                    ],
-                    "total" : "12 Days",
-                    "responsible" : "Merrick Christensen"
-              }
+		view: function(){
+			var Task = this.getModel('Task'),
+				self = this;
 
-          ]);
+			Task.findOne({
+					_id : this.request.param('id')
+				}, function(error, task){
+					if(error){
+						return self.error();
+					}
 
-    var mytask = new Task({"url": config.url});
-	  	
-	//just testing
-	mytask.createDB('testing');
- }
-})
+					self.json(task);
+				});
+		},
+
+		new: function(){
+			var self = this;
+			
+			this.getModel('Task')
+				.create(this.request.body)
+				.then(function(){
+					self.response.send({
+						status: 'successful'
+					})
+				})
+				.fail(function(error){
+					self.error();
+				})
+				.end();
+		}
+	});

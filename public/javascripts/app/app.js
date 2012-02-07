@@ -3,13 +3,12 @@ define(['jquery', 'backbone', 'app/views/board', 'app/collections/tasks', 'app/m
     var App = Backbone.Router.extend({
 
         routes : {
-            "" : "index"
+            'view/:id' : 'view'
         },
 
-        index: function(){
+		view: function(id){
             new BoardView({
-                collection: TasksCollection,
-                model: (new Board({ id: 12 }))
+                model: (new Board({ id: id }))
             });
         }
 

@@ -1,19 +1,17 @@
 <div class="task">
     <div class="pin"></div>
     <div class="details">
-        <h2>Write the twitter connector.</h2>
-        <p class="small">Started January 2</p>
+        <h2>{{description}}</h2>
+        <p class="small">Started {{started}}</p>
     </div>
     <div class="receipt">
         <ul>
-            <li>
-                <div class="item">Development:</div>
-                <div class="cost">3 Days</div>
-            </li>
-            <li>
-                <div class="item">Design:</div>
-                <div class="cost">9 Days</div>
-            </li>
+			{{#items}}
+			<li>
+				<div class="item">{{name}}</div>
+				<div class="cost">{{started}}</div>
+			</li>
+			{{/items}}
         </ul>
         <div class="total">
             <div class="item">Total:</div>
