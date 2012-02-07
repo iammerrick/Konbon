@@ -4,7 +4,8 @@ require.config({
         'backbone' : 'vendor/backbone',
         'jquery' : 'vendor/jquery',
         'hogan' : 'vendor/hogan',
-        'text' : 'vendor/text'
+        'text' : 'vendor/text',
+		'moment' : 'vendor/moment'
     }
 });
 

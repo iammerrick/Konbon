@@ -14,7 +14,6 @@ define(['jquery', 'backbone', 'app/views/task', 'app/models/task'], function($, 
 
         render: function(){
 			this.createColumns();
-			console.log(this.model.toJSON());
             return this;
         },
 

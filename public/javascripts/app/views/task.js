@@ -10,8 +10,7 @@ define(['jquery', 'backbone', 'hogan', 'text!app/templates/task.mustache'], func
 		},
 
         render: function(){
-			console.log(this.model.toJSON());
-            var html = this.template.render(this.model.toJSON());
+            var html = this.template.render(this.model.display());
             this.$el.html(html);
             return this;
         }

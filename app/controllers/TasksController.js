@@ -15,7 +15,7 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
 					if(error){
 						return self.error();
 					}
-
+					
 					self.json(task);
 				});
 		},

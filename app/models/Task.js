@@ -1,7 +1,7 @@
 var ItemSchema = new mongoose.Schema({
 	name: String,
-	start: Date,
-	end: Date
+	started: Date,
+	finished: Date
 });
 
 var Schema = new mongoose.Schema({
@@ -12,6 +12,5 @@ var Schema = new mongoose.Schema({
 	items: [ItemSchema],
 	responsible: String
 });
-
 
 module.exports = mongoose.model('Task', Schema);
