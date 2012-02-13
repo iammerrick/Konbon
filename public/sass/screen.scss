@@ -2,6 +2,15 @@
 @import "compass/utilities";
 @import "compass/css3";
 
+@mixin embed($image) {
+	@include inline-block;
+	@include background(image-url($image) no-repeat);
+	overflow: hidden;
+	text-indent: -9999px;
+	width: image-width($image);
+	height: image-height($image);
+}
+
 body{
     @include background(image-url('grid.png'));
     font: 12px "Helvetica Neue", Helvetica;
@@ -9,7 +18,6 @@ body{
 }
 
 $headers: #6E6E6E;
-
 
 .header{
     background-color: #FFFFFF;
@@ -69,9 +77,7 @@ $headers: #6E6E6E;
     }
 
     .pin{
-        @include background(image-url('pin.png') no-repeat);
-        width: 25px;
-        height: 25px;
+        @include embed('pin.png');
         position: absolute;
         left: ((230px - 25) / 2);
         top: -(25px / 2);
@@ -138,4 +144,8 @@ $headers: #6E6E6E;
             }
         }
     }
+}
+
+.add-column-action{
+	@include embed('add.png');
 }

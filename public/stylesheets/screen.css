@@ -63,14 +63,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 5, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
   background: url('../images/grid.png?1328146262');
   font: 12px "Helvetica Neue", Helvetica;
   color: #8d8d8d;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .header {
   background-color: #FFFFFF;
   color: #6e6e6e;
@@ -78,7 +78,7 @@ body {
   line-height: 100px;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .headers {
   margin: 0;
   padding: 0;
@@ -109,7 +109,7 @@ body {
 .headers li.last {
   padding-right: 0;
 }
-/* line 24, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .headers li {
   width: 230px;
   font-size: 36px;
@@ -118,27 +118,27 @@ body {
   text-align: center;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .column {
   width: 230px;
   margin: 0px 40px;
   float: left;
 }
-/* line 38, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .column:first-child {
   margin-left: 0px;
 }
-/* line 42, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .column:last-child {
   margin-right: 0px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .inside {
   padding: 0px 40px;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .task {
   background-color: #FFFFFF;
   margin: 25px 0px 50px;
@@ -149,7 +149,7 @@ body {
   -o-box-shadow: #bdb9b8 0px 1px 3px;
   box-shadow: #bdb9b8 0px 1px 3px;
 }
-/* line 58, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .task .responsible {
   background-color: #F2F0F0;
   position: absolute;
@@ -162,74 +162,103 @@ body {
   font-weight: bold;
   color: #8d8d8d;
 }
-/* line 71, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .task .pin {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
   background: url('../images/pin.png?1328148019') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
   width: 25px;
-  height: 25px;
+  height: 26px;
   position: absolute;
   left: 102.5px;
   top: -12.5px;
 }
-/* line 81, ../sass/screen.scss */
+/* line 7, ../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.task .pin {
+  *display: inline;
+}
+/* line 87, ../sass/screen.scss */
 .task .details h2 {
   color: #575757;
   text-align: center;
   font-weight: bold;
   padding: 5px 0px 2px 0px;
 }
-/* line 88, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .task .details .small {
   font-size: a10px;
   text-align: center;
 }
-/* line 94, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .task .receipt {
   margin-top: 20px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .task .receipt ul {
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 102, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .task .receipt li {
   overflow: hidden;
   *zoom: 1;
   padding: 5px 0px;
 }
-/* line 107, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .task .receipt li:first-child {
   padding-top: 20px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .task .receipt li:last-child {
   padding-bottom: 20px;
 }
-/* line 115, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .task .receipt .item {
   float: left;
 }
-/* line 119, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .task .receipt .cost {
   float: right;
 }
-/* line 123, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .task .receipt .total {
   overflow: hidden;
   *zoom: 1;
   padding: 10px 0px;
 }
-/* line 127, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .task .receipt .total .cost {
   font-size: 18px;
   font-weight: bold;
 }
-/* line 132, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .task .receipt .total .good {
   color: #588400;
 }
-/* line 136, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .task .receipt .total .bad {
   color: #a80707;
+}
+
+/* line 149, ../sass/screen.scss */
+.add-column-action {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  background: url('../images/add.png?1329103904') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 31px;
+  height: 31px;
+}
+/* line 7, ../../../../../.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.add-column-action {
+  *display: inline;
 }

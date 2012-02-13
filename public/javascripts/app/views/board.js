@@ -2,6 +2,12 @@ define(['jquery', 'backbone', 'app/views/task', 'app/models/task'], function($, 
 
     var BoardView = Backbone.View.extend({
 
+		el: 'body',
+
+		events: {
+			'click .add-column' : 'add'
+		},
+
 		initialize: function(){
             var self = this;
 
@@ -13,21 +19,26 @@ define(['jquery', 'backbone', 'app/views/task', 'app/models/task'], function($, 
         },
 
         render: function(){
+			
 			this.createColumns();
+
             return this;
         },
+
+		add: function(e){
+			e.preventDefault();
+		},
 
 		createColumns: function(){
 			// Iterate through columns
 			_(this.model.get('columns')).each(function(column){
 				
 				// Make the headers
-				$('.headers').append('<li>'+column.name+'</li>');
+				this.$('.headers').prepend('<li>'+column.name+'</li>');
 				
-
 				// Make the column and append to DOM
 				var $column = $('<div class="column" data-column-id="'+column._id+'" />');
-				$('.columns').append($column);
+				this.$('.columns').append($column);
 				
 				_(column.tasks).each(function(task){
 					var taskView = new TaskView({

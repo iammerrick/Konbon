@@ -1,4 +1,6 @@
-module.exports = require(app.set('controllers') + '/ApplicationController').extend()
+module.exports = require(app.set('controllers') + '/ApplicationController').extend(function(){
+		this.addBeforeFilter(['edit', 'view'], this.load);
+	})
 	.methods({
 		
 		index: function(){
@@ -8,17 +10,7 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
 		},
 
 		view: function(){
-			var Board = this.getModel('Board'),
-				self = this;
-
-			Board.findOne({ uri : this.request.param('uri') }, function(error, instance){
-				if(error){
-					console.log(error);
-					self.error();
-				}
-				self.json(instance);
-				
-			});
+			this.json(this.board);
 		},
 
 		new: function(){
@@ -35,5 +27,23 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
 					self.error();
 				})
 				.end();
+		},
+		
+		edit: function(){
+			
+		},
+
+		load: function(next){
+			var Board = this.getModel('Board'),
+				self = this;
+			
+			Board.findOne({ uri : this.request.param('uri') }, function(error, instance){
+				if (error) {
+					next(error);
+				} else {
+					self.board = instance;
+					next(null);
+				}
+			});
 		}
 	});
