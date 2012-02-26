@@ -1,3 +1,5 @@
+var _ = require('underscore');
+
 module.exports = require(app.set('controllers') + '/ApplicationController').extend(function(){
 		this.addBeforeFilter(['edit', 'view'], this.load);
 	})
@@ -30,6 +32,19 @@ module.exports = require(app.set('controllers') + '/ApplicationController').exte
 		},
 		
 		edit: function(){
+			var self = this;
+			
+			_.extend(this.board, this.request.body);
+			
+			this.board.save(function(err){
+				if (err) {
+					self.error();
+				} else {
+					self.response.send({
+						status: 'successful'
+					});
+				}
+			});
 			
 		},
 
